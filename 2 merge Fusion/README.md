@@ -1,5 +1,6 @@
-eProcessor/tree/master/2%20merge%20Fusion)| [Detail Exp# 图像融合
-@(Tutorial)[[Code Repository](https://github.com/JinlongLi2016/RemoteSensingImaglanation](http://www.baike.com/wiki/%E5%9B%BE%E5%83%8F%E8%9E%8D%E5%90%88)|[《遥感图像原理》]]
+# 图像融合
+@(Tutorial)[[Code Repository](https://github.com/JinlongLi2016/RemoteSensingImaglanation)| [Detail Explanation](http://www.baike.com/wiki/%E5%9B%BE%E5%83%8F%E8%9E%8D%E5%90%88)]
+
 
 ## 什么是图像融合？
 
