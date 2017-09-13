@@ -26,8 +26,10 @@ unfinshed...
 ## 合成影像
 ### 加权融合
 <img src = '加权融合.jpg' height = 500 alt = '加权融合 image'/>
+
 ### 比值融合
 <img src = '比值变换融合.jpg' height = 500 alt = '比值变换融合 image'/>
+
 ### 乘积融合
 <img src = '乘积变换.jpg' height = 500 alt = '乘积 image'/>
 
