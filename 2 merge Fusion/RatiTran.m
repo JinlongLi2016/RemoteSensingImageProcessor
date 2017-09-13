@@ -10,7 +10,7 @@ pan_img = imread('spot.bmp');
 
 %% 2 Do some transformation
 multi_img = double(multi_img);
-weights3  = multi_img ./ repmat( sum(multi_img, 3), [1, 1, 3]) ;
+weights3  = multi_img ./ ( repmat( sum(multi_img, 3), [1, 1, 3]) +1);
 clear multi_img;
 % 
 DB = weights3 .* double(repmat( pan_img, [1, 1, 3]));
