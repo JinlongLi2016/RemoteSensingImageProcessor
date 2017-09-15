@@ -2,15 +2,15 @@ function [img_matched] = matcher()
 % A FUNCTION OF IMAGE MATCHING
 
 clear all;
-% the first two columns are coordinates on refernce image
+% the first two columns are coordinates in base image
 all_ = load('sp.txt');
 
 cood = all_(:, 1:4);
-% delta_a/b from refer to dist_image中文
+% delta_a/b from base to warp image中文
 [delta_a, delta_b, ~, ~] =coefficients_calculator(cood, 9, 6);
 
 coord_t = [cood(:, 3:4), cood(:, 1:2)] ;
-% a/b2 from dist_image to refer_image
+% a/b2 from warp image to base_image
 [delta_a2, delta_b2, ~, ~] = coefficients_calculator(coord_t, 9, 6);
 
 % after calculating the coefficents
@@ -37,8 +37,8 @@ for channel = 1:1:3
     % for every point
     t = 0;
     output_img = zeros(int32(output_m), int32(output_n), 'double');
-    for i = 0:1:output_m - 2
-        for j = 0:1: output_n - 2
+    for i = 0:1:output_m - 1
+        for j = 0:1: output_n - 1
             t_A = gen_A( [j, i]);
             row_x = t_A * delta_a;
             row_y = t_A * delta_b;
@@ -47,7 +47,7 @@ for channel = 1:1:3
             y = int32(row_y);
             
             if(1<=row_x && row_x <= dis_n-2 && row_y >=1 &&row_y <= dis_m-2)        
-                R1 = raw_img(y, x + 1)*(row_x - double(x)) + raw_img(y, x) * (double(x) +1 - row_x);
+                R1 = raw_img(y, x + 1) * (row_x - double(x)) + raw_img(y, x) * (double(x) +1 - row_x);
                 R2 = raw_img(y+1, x+1) * (row_x - double(x)) + raw_img(y+1, x) * (double(x) + 1 - row_x);
                 output_img(j+1, i+1) = R1*(double(y)+1 - row_y) + R2 * (row_y -double( y ));
             else
