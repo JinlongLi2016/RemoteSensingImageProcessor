@@ -3,8 +3,8 @@ function [del_a, del_b, del_x, del_y] = coefficients_calculator(all_coords, n, N
 % THESE COEFFICIENTS ARE THOSE FROM THE 1ST 2 COLS (X,Y) 
 % TO THE LAST 2 COLS (x, y)
 % all_coords :
-%  1st 2 cols are reference image coords [X, Y]
-%  last 2 cos are undistorted image coords (x, y)
+%  1st 2 cols are base image coords [X, Y]
+%  last 2 cos are warp image coords (x, y)
 
 %n = 9; % num of control points
 %N =12; % num of the coefficients

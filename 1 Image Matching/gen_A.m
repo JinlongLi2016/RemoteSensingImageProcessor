@@ -3,6 +3,7 @@ function [A] = gen_A(XY)
 %'Principles and Applications of Remote Sensing'  for more information
 % on A].
 
+XY = double(XY);
 [m, ~]= size( XY );
 t = XY .* XY;
 A =[ones(m, 1),  XY, t(:, 1),  [XY(:, 1) .* XY(:, 2)],  t(:, 2) ];
