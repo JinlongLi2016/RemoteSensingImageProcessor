@@ -8,6 +8,8 @@ assert( sum(size(Am)== size(Bm)) == 2, 'Input matrixs"s shapes are not consisten
 
 %% Calculate Correlation Coefficients
 % 1 remove the mean of matrix A and B
+Am = double(Am); Bm = double(Bm);
+
 Am = Am - mean(Am(:));
 Bm = Bm - mean(Bm(:));
 Am = double(Am(:)); Bm = double(Bm(:));
