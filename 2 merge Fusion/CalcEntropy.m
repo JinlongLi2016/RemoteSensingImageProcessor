@@ -1,5 +1,5 @@
 function [val] = CalcEntropy(p)
-% 
+% Calculate p
 
 if p == 0
     val = 0;

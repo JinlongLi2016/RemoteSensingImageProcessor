@@ -11,8 +11,8 @@ cood = all_(:, 1:4);
 
 coord_t = [cood(:, 3:4), cood(:, 1:2)] ;
 % a/b2 from warp image to base_image
-[delta_a2, delta_b2, ~, ~] = coefficients_calculator(coord_t, 9, 6);
-
+[delta_a2, delta_b2, inacc_x, inacc_y] = coefficients_calculator(coord_t, 9, 6);
+fprintf('in_acc_x:    %f, in_acc_y:   %f\n', inacc_x, inacc_y);
 % after calculating the coefficents
 % 1. read in the reference image and to_be_undistorted image
 % 2. according to coefficents, converts the 

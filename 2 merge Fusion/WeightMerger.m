@@ -24,5 +24,5 @@ G_img = (G_img);
 imshow(G_img)  % image dtype is very nasty
                                 % be careful when deal with it
                                 % 0-1 0-255 uint8 double
-
+G_img = uint8(G_img*255);
 end
