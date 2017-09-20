@@ -1,5 +1,6 @@
 function [ H ] = AssessArray( DataArray )
 % Calculate The Entropy Of An Array
+% øº ‘”√
 
 DataArray = uint8(DataArray);
 H = 0.0;
@@ -9,7 +10,7 @@ if ndims(DataArray) == 2
     for pix_val =0:1:255
         temp = (DataArray == pix_val);
         p = sum(temp(:)) / total_pixels;
-        H = H - CalcEntropy(p);
+        H = H + CalcEntropy(p);
     end
     
 elseif ndims(DataArray) == 3
@@ -19,7 +20,7 @@ elseif ndims(DataArray) == 3
         for pix_val = 0:1:255
             temp = (DataArray==pix_val);
             p = sum(temp(:)) / total_pixels;
-            H = H - CalcEntropy(p);% The joint entropy ...
+            H = H + CalcEntropy(p);% The joint entropy ...
         end
     end
 else
