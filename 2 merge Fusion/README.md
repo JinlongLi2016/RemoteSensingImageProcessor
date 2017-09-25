@@ -32,7 +32,7 @@
 
 ## 代码说明
 
- On the way
+ ~~On the way~~ Die the way
 
 ## 合成影像
 ### 加权融合
