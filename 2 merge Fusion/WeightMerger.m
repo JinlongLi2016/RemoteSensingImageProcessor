@@ -6,6 +6,9 @@ function   [G_img] = WeightMerger()
 multi_img = imread('tm_743.bmp'); % Multi_spectral Image
 pan_img = imread('spot.bmp'); % Panchromatic Image
 
+pan_img = im2single(pan_img);
+multi_img = im2single(multi_img);
+
 %% 2 For each channel ...
 % G_img stores generated image 
 for channel = 1:1:3
@@ -13,10 +16,13 @@ for channel = 1:1:3
     coef = CalcCorrCoef(tmp_img, pan_img);
     coef = abs(coef);
     
-    G_img(:, :, channel) = ( (1 + coef) * pan_img + (1 - coef) * tmp_img) / 2.;
+    G_img(:, :, channel) = ( (1 + coef) * (pan_img) + (1 - coef) * (tmp_img)) / 2.;
 end
+G_img = (G_img);
 
 %% Display the image
-imshow(G_img)
+imshow(G_img)  % image dtype is very nasty
+                                % be careful when deal with it
+                                % 0-1 0-255 uint8 double
 
 end
