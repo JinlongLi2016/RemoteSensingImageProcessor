@@ -1,0 +1,15 @@
+RatiTran Merge:
+Multispectral image:
+channel:B;Mean of gradient:5.944622921575402
+channel:G;Mean of gradient:8.709914229532627
+channel:R;Mean of gradient:10.89396359403197
+after merge:
+channel:B;Mean of gradient:5.782988509595659
+channel:G;Mean of gradient:4.213058586617263
+channel:R;Mean of gradient:4.5414446353338604
+channel:B;Shannon Value:6.228911117706189
+channel:G;Shannon Value:5.318511227643928
+channel:R;Shannon Value:5.692776051870967
+channel:B;Relationship:0.4810288042229313
+channel:G;Relationship:0.41611925791638876
+channel:R;Relationship:0.6539122375432521
