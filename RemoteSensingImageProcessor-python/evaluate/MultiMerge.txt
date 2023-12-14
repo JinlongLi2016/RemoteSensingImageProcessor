@@ -1,0 +1,15 @@
+Multi Merge:
+Multispectral image:
+channel:B;Mean of gradient:5.944622921575402
+channel:G;Mean of gradient:8.709914229532627
+channel:R;Mean of gradient:10.89396359403197
+after merge:
+channel:B;Mean of gradient:11.318275188274127
+channel:G;Mean of gradient:9.513337299529153
+channel:R;Mean of gradient:10.846341010910663
+channel:B;Shannon Value:7.471698987347025
+channel:G;Shannon Value:7.007047561782092
+channel:R;Shannon Value:7.3085504715164245
+channel:B;Relationship:0.8166353756434584
+channel:G;Relationship:0.7252177960005226
+channel:R;Relationship:0.8327441223955325
